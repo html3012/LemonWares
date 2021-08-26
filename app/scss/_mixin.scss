@@ -1,0 +1,49 @@
+@mixin line-clamp($lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+// $screen-xs-max: 374.90px;
+$screen-sm-max: 479.90px;
+$screen-md-max: 767.90px;
+$screen-lg-max: 991.90px;
+$screen-xl-max: 1199.90px;
+$screen-xxl-max: 1319.90px;
+
+// @mixin xs {
+//     @media only screen and (max-width: #{$screen-xs-max}) {
+//         @content;
+//     }
+// }
+
+@mixin sm {
+    @media only screen and (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media only screen and (max-width: #{$screen-lg-max}) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media only screen and (max-width: #{$screen-xl-max}) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media only screen and (max-width: #{$screen-xxl-max}) {
+        @content;
+    }
+}
