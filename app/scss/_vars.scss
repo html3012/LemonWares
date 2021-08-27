@@ -1,0 +1,59 @@
+$white:      #ffffff; 
+$white-200:  #f7fafe;
+$accent:     #b00000;
+$quote:      #e7b3b3;
+$circle:     #f3d9d9;
+$quote-sm:   #c0eef0;
+$yellow:     #ffe87a;
+$black:      #000000;
+$title:      #2e2e2e;
+$item:       #808080;
+$gray-700:   #969bab;
+$text:       #18191f;
+$text-100:   #d6d4d4;
+$text-white: #e6e6e6;
+
+%inter-400 {
+    font-family: "Inter-Regular", sans-serif;
+    font-weight: 400;
+}
+
+%inter-600 {
+    font-family: "Inter-SemiBold", sans-serif;
+    font-weight: 600;
+}
+
+%inter-700 {
+    font-family: "Poppins-Bold", sans-serif;
+    font-weight: 700;
+}
+
+%inter-800 {
+    font-family: "Inter-ExtraBold", sans-serif;
+    font-weight: 800;
+}
+
+%poppins-400 {
+    font-family: "Poppins-Regular", sans-serif;
+    font-weight: 400;
+}
+
+%poppins-300 {
+    font-family: "Poppins-Light", sans-serif;
+    font-weight: 300;
+}
+
+%poppins-600 {
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-weight: 600;
+}
+
+%poppins-700 {
+    font-family: "Poppins-Bold", sans-serif;
+    font-weight: 700;
+}
+
+%df {
+    display: flex;
+    justify-content: space-between;
+}

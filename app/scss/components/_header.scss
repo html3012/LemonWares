@@ -1,0 +1,105 @@
+.header {
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 41px 0 80px 0;
+
+        @include lg {
+            padding: 20px 0 60px 0;
+
+        }
+    }
+
+    &__nav {
+        max-width: 755px;
+        width: 100%;
+        @extend %df;
+        font-size: 15px;
+        @extend %poppins-600;
+        transition: transform 0.5s ease;
+       
+        @include lg {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: $accent;
+            display: block;
+            padding: 150px 20px;
+            font-size: 18px;
+            text-align: center;
+            color: $white-200;
+            transform: translateY(-200%);
+        }
+
+        &--active {
+            transform: translateY(0);
+        }
+    }
+
+    &__inner {
+        display: flex;
+
+        @include lg {
+            display: block;
+        }
+    }
+
+    &__item {
+        @include not(33px);
+
+        @include lg {
+            padding: 15px;
+            @include not(0);
+        }
+    }
+
+    &__link {
+        position: relative;
+        &--tel {
+            margin: 0 78px 0 62px;
+            position: relative;
+
+            @include lg {
+                display: none;
+            }
+
+            &::before {
+                content: url("../../img/icons/phone.svg");
+                position: absolute;
+                top: 5px;
+                left: -27px;
+            }
+        }
+        &--active {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 1px;
+                background-color: $accent;
+                bottom: -4px;
+                left: 10%;
+                right: 10%;
+            }
+        }
+    }
+
+    .logo {
+        max-width: 91px;
+        width: 100%;
+        margin-right: 65px;
+        z-index: 0;
+    }
+
+    .logo-white {
+        z-index: 2;
+        position: absolute;
+        left: 20px;
+        display: none;
+        &--active {
+            display: block;
+        }
+    }
+}

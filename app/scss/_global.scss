@@ -7,7 +7,11 @@ body {
 }
 
 body {
-    
+   background-color: $white;
+   color: $black; 
+   @extend %inter-400;
+   font-size: 16px;
+   line-height: 2;
 }
 
 .wrapper {
@@ -48,4 +52,11 @@ body {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap; /* added line */
     border: 0;
+}
+
+.btn-burger {
+    display: none;
+    @include lg {
+        display: block;
+    }
 }

@@ -5,6 +5,12 @@
     overflow: hidden;
 }
 
+@mixin not ($px){
+    &:not(:last-child){
+        margin-right: $px;
+    }
+}
+
 // $screen-xs-max: 374.90px;
 $screen-sm-max: 479.90px;
 $screen-md-max: 767.90px;
