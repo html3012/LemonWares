@@ -1,4 +1,6 @@
-.hero{
+.hero {
+    margin-bottom: 80px;
+
     &__inner {
        @extend %df;
 
@@ -34,8 +36,10 @@
         color: $text-100;
         position: relative;
         transition: color 0.3s ease;
-        &:hover{
+
+        &:hover {
             color: $accent;
+
             &::after {
                 position: absolute;
                 content: '';
@@ -46,9 +50,7 @@
                 background-color: $accent;
                 transition: all 0.3s;
             }
-        }
-       
-        
+        }        
     }
 
     &__title {
@@ -71,6 +73,7 @@
         color: $item;
         font-size: 16px;
         line-height: 1.8;
+
         @include sm {
             margin-bottom: 30px;
         }
@@ -89,6 +92,7 @@
     &__picture {
         padding: 0 25px;
         position: relative;
+
         @include md {
             padding: 0 15px;
         }
@@ -109,6 +113,7 @@
         &--left {
             left: 0;
         }
+
         &--top {
             bottom: 50%;
             right: 0;
