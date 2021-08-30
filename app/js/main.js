@@ -6,4 +6,10 @@ $(function () {
         $('body').toggleClass('lock');
     });
 
+    var mixer = mixitup('.filter__inner', {
+        load: {
+            filter: '.basic'
+        }
+    });
+
 });

@@ -1,0 +1,104 @@
+.testimonials {
+    &__title {
+        max-width: 482px;
+        width: 100%;
+        margin-bottom: 7px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 84px;
+    }
+
+    &__inner {
+        @include not(30px);
+        &--left {
+            padding-top: 56px;
+        }
+        &--right {
+            padding-top: 104px;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+       font-size: 18px;
+       line-height: 1.8;
+       color: $text;
+       margin-bottom: 24px;
+    }
+
+    &__img {
+        object-fit: cover;
+    }
+
+    &__story {
+        padding: 40px 32px 32px 64px;
+        box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+        border-radius: 8px;
+        max-width: 350px;
+        width: 100%;
+
+        &--side {
+            margin-left: auto;
+        }
+    }
+
+    &__name {
+        @extend %inter-700;
+        font-size: 18px;
+        line-height: 1.6;
+        color: $text;
+    }
+
+    &__post {
+        display: block;
+        @extend %inter-400;
+        font-size: 14px;
+        line-height: 1.7;
+        color: $gray-700;
+    }
+
+    .story {
+        max-width: 445px;
+        width: 100%;
+    }
+
+    &__bottom {
+       @extend %df;
+       margin-bottom: 106px;
+    }
+
+    &__heading {
+        max-width: 482px;
+        width: 100%;
+    }
+
+    &__brends {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    &__items {
+        @extend %df;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 33.33%;
+        display: flex;
+        justify-content: flex-end;
+
+        @include xxl {
+            width: 50%;
+        }
+
+        @include md {
+            justify-content: space-around;
+        }
+    }
+
+
+
+}

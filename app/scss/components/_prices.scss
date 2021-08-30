@@ -1,0 +1,97 @@
+.prices {
+    text-align: center;
+    color: $black;
+
+    &__title {
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto 36px;
+    }
+
+    &__text,
+    &__time {
+        font-size: 25px;
+        line-height: 1;
+    }
+
+    &__text {
+        display: inline-block;
+        margin-bottom: 57px;
+    }
+
+    &__time {
+        margin-right: 5px;
+    }
+
+    &__choose {
+        margin-bottom: 70px;
+        line-height: 50px;
+    }
+
+    &__discount {
+        @extend %poppins-400;
+        font-size: 10px;
+        padding: 7px 8px;
+        background-color: $yellow;
+        border-radius: 8px;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    &__switch {
+        position: relative;
+        display: inline-block;
+        width: 93px;
+        height: 50px;
+        margin: 0 26px;
+
+        @include sm {
+            width: 73px;
+            height: 35px;
+            margin: 0 15px;
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $accent;
+        border-radius: 73px;
+        transition: all 0.4s;
+        &:before {
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 30px;
+            left: 9px;
+            bottom: 10px;
+            background-color: $white;
+            transition: all 0.4s;
+            border-radius: 50%;
+
+            @include sm {
+                width: 20px;
+                height: 20px;
+                bottom: 8px;
+            }
+        }
+    }
+
+    &__checkbox {
+        opacity: 0;
+        width: 0;
+        height: 1;
+        &:checked + .prices__slider:before {
+            transform: translateX(46px);
+            @include sm {
+                transform: translateX(32px);
+            }
+        }
+    }
+}

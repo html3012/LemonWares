@@ -1,0 +1,121 @@
+.filter {
+    margin-bottom: 105px;
+    
+    &__btn {
+        background-color: transparent;
+        padding: 6px 180px;
+        border-bottom: 4px solid transparent;
+        @extend %poppins-600;
+        font-size: 30px;
+        line-height: 1.3;
+        margin-bottom: 80px;
+
+        @include lg {
+            padding: 6px 100px;
+        }
+
+        @include lg {
+            padding: 6px 50px;
+            font-size: 24px;
+        }
+
+        @include sm {
+            padding: 6px 28px;
+        }
+    }
+
+    &__case {
+        padding: 34px 29px 48px 35px;
+        border: 1.5px solid $border;
+        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 0 50px;
+
+        @include xl {
+            margin: 0 25px;
+        }
+
+        @include lg {
+            margin: 0 20px 30px;
+        }
+    }
+
+    &__title {
+        @extend %poppins-600;
+        font-size: 28px;
+        line-height: 0.9;
+        margin-bottom: 11px;
+
+        @include md {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 28px;
+        text-align: left;
+    }
+
+    &__price {
+        @extend %poppins-600;
+        font-size: 42px;
+        line-height: 0.8;
+        margin-bottom: 11px;
+    }
+
+    &__time {
+        margin-bottom: 35px;
+        @extend %poppins-300;
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    &__button {
+        padding: 9px 60px 9px 56px;
+        border: 2px solid $black;
+        background-color: $white;
+        border-radius: 12px;
+        @extend %poppins-600;
+        font-size: 14px;
+        line-height: 2.3;
+        margin-bottom: 35px;
+        &:hover {
+            border-color: $accent;
+            color: $accent;
+        }
+
+        @include xl {
+            padding: 9px 40px 9px 36px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+
+        @include lg {
+            display: block;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 48px;
+        text-align: left;
+
+        &::before {
+            position: absolute;
+            content: url("../../../img/icons/checkmark.svg");
+            left: 0;
+        }
+    }
+
+    .mixitup-control-active {
+        border-bottom: 4px solid $accent;
+    }
+}

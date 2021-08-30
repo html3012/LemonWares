@@ -74,4 +74,20 @@ body {
     font-size: 48px;
     line-height: 1.3;
     color: $text;
+
+    @include md {
+        font-size: 38px;
+    }
 }
+
+.title-lg {
+    @extend %poppins-600;
+    font-size: 50px;
+    line-height: 1.2;
+    color: $black;
+
+    @include md {
+        font-size: 42px;
+    }
+}
+
