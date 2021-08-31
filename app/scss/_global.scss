@@ -91,3 +91,17 @@ body {
     }
 }
 
+.triengl {
+    position: absolute;
+    max-width: 40px;
+    width: 40px;
+    bottom: 25%;
+    fill: $accent;
+
+    @include md {
+        max-width: 28px;
+        width: 100%;
+    }
+
+}
+

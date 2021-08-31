@@ -11,18 +11,12 @@
     }
 }
 
-// $screen-xs-max: 374.90px;
 $screen-sm-max: 479.90px;
 $screen-md-max: 767.90px;
 $screen-lg-max: 991.90px;
 $screen-xl-max: 1199.90px;
 $screen-xxl-max: 1289.90px;
 
-// @mixin xs {
-//     @media only screen and (max-width: #{$screen-xs-max}) {
-//         @content;
-//     }
-// }
 
 @mixin sm {
     @media only screen and (max-width: #{$screen-sm-max}) {

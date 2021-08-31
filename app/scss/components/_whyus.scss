@@ -46,6 +46,10 @@
         display: flex;
         justify-content: flex-end;
         padding: 25px 0;
+        transition: opacity 0.3s;
+        &:hover {
+            opacity: 0.5;
+        }
 
         @include xxl {
             width: 50%;
