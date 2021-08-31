@@ -1,0 +1,185 @@
+.testimonials {
+    &__title {
+        max-width: 482px;
+        width: 100%;
+        margin-bottom: 7px;
+        position: relative;
+        z-index: 2;
+        &--quote {
+            &::before {
+                position: absolute;
+                content: url('../../img/icons/quote.svg');
+                opacity: 0.3;
+                z-index: -1;
+                left: -90px;
+                bottom: 50px;
+
+                @include xl {
+                   display: none;
+                }
+
+            }
+        }
+        
+    }
+
+    &__top {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 84px;
+       
+        @include md {
+           display: block;
+        }
+    }
+
+    &__inner {
+        @include not(30px);
+
+        @include md {
+            @include not(0);
+            margin-bottom: 30px;
+        }
+        &--left {
+            padding-top: 56px;
+
+            @include md {
+                padding-top: 0;
+            }
+        }
+        &--right {
+            padding-top: 104px;
+
+            @include md {
+                padding-top:0;
+
+            }
+        }
+    }
+
+    &__text {
+        display: inline-block;
+       font-size: 18px;
+       line-height: 1.8;
+       color: $text;
+       margin-bottom: 24px;
+    }
+
+    &__img {
+        object-fit: cover;
+        transition: opacity 0.3s;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__story {
+        padding: 40px 32px 32px 64px;
+        box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+        border-radius: 8px;
+        max-width: 350px;
+        width: 100%;
+
+        &--side {
+            margin-left: auto;
+        }
+
+        @include md {
+            max-width: 80%;
+            &--aside {
+                margin-left: auto;
+            }
+        }
+
+        @include sm {
+            max-width: 100%;
+        }
+    }
+
+    &__name {
+        @extend %inter-700;
+        font-size: 18px;
+        line-height: 1.6;
+        color: $text;
+        font-style: normal;
+    }
+
+    &__post {
+        display: block;
+        @extend %inter-400;
+        font-size: 14px;
+        line-height: 1.7;
+        color: $gray-700;
+    }
+
+    &__content {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: url('../../img/icons/quote-sm.svg');
+            left: -30px;
+            top: -12px;
+            opacity: 0.3;
+            z-index: -1;
+        }
+    }
+
+    .story {
+        max-width: 445px;
+        width: 100%;
+    }
+
+    &__bottom {
+       @extend %df;
+       margin-bottom: 106px;
+
+       @include md {
+           display: block;
+       }
+      
+    }
+
+    &__heading {
+        max-width: 482px;
+        width: 100%;
+        @include md {
+            max-width: 100%;
+        }
+       
+    }
+
+    &__brends {
+        max-width: 500px;
+        width: 100%;
+
+        @include md {
+            max-width: 100%;
+        }
+    }
+
+    &__items {
+        @extend %df;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 33.33%;
+        display: flex;
+        justify-content: flex-end;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        @include lg {
+            width: 50%;
+        }
+
+        @include md {
+            justify-content: space-around;
+        }
+    }
+
+
+
+}

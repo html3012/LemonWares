@@ -1,0 +1,160 @@
+.hero {
+    margin-bottom: 80px;
+
+    &__inner {
+       @extend %df;
+
+       @include md {
+           display: block;
+       }
+    }
+
+    &__content {
+        max-width: 550px;
+        width: 100%;
+
+        @include md {
+            max-width: 100%;
+        }
+    }
+
+    &__nav {
+        margin-bottom: 25px;
+        display: inline-block;
+        border-bottom: 1px solid $text-100;
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        @include not (20px);
+        @extend %poppins-600;
+        font-size: 15px;
+        line-height: 1.5;
+        color: $text-100;
+        position: relative;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $accent;
+
+            &::after {
+                position: absolute;
+                content: '';
+                left: 10%;
+                right: 10%;
+                height: 1px;
+                bottom: 0;
+                background-color: $accent;
+                transition: all 0.3s;
+            }
+        }        
+    }
+
+    &__title {
+        @extend %poppins-700;
+        font-size: 64px;
+        line-height: 1.2;
+        color: $title;
+        margin-bottom: 34px;
+
+        @include md {
+            font-size: 48px;
+        }
+    }
+
+    &__text {
+        display: block;
+        margin-bottom: 60px;
+        max-width: 450px;
+        width: 100%;
+        color: $item;
+        font-size: 16px;
+        line-height: 1.8;
+
+        @include sm {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__img {
+       max-width: 501px;
+       width: 100%;
+       object-fit: cover;
+
+       @include md {
+           max-width: 100%;
+       }
+    }
+
+    &__picture {
+        padding: 0 25px;
+        position: relative;
+
+        @include md {
+            padding: 0 15px;
+        }
+    }
+
+    &__triengl {
+       
+        &--left {
+            left: 0;
+        }
+
+        &--top {
+            bottom: 50%;
+            right: 0;
+        }
+
+        &--big {
+            max-width: 72px;
+            width: 100%;
+            bottom: 10%;
+            right: 0;
+
+            @include md {
+                max-width: 50px;
+                width: 100%;
+            }
+        }
+    }
+
+    &__btn {
+        border: 1px solid $black;
+        border-radius: 8px;
+        background-color: $white;
+        color: $black;
+        @extend %poppins-400;
+        line-height: 1.7;
+        padding: 12px 18px;
+        transition: all 0.3s ease;
+
+        &--create {
+            margin-right: 24px;
+
+            @include lg {
+                margin-right: 10px;
+            }
+        }
+
+        &:hover {
+            background-color: $accent;
+            color: $white;
+            border-color: transparent;
+        }
+
+        @include md {
+            margin-bottom: 60px;
+            padding: 8px 10px;
+        }
+
+        @include sm {
+            margin-bottom: 30px;
+            padding: 5px 5px;
+        }
+    }
+
+}

@@ -1,0 +1,145 @@
+.footer {
+    background-color: $accent;
+    color: $text-white;
+    padding: 64px 0 80px 0;
+
+    @include lg {
+        padding: 34px 0 40px 0;
+    }
+
+    &__top {
+        display: flex;
+        margin-bottom: 96px;
+        @include lg {
+            display: block;
+            margin-bottom: 66px;
+        }
+
+        @include md {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__content {
+        width: 25%;
+        margin-right: 120px;
+
+        @include lg {
+            width: 100%;
+        }
+    }
+
+    &__nav {
+        width: 75%;
+        @extend %df;
+
+        @include lg {
+            width: 100%;
+        }
+
+        @include md {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__text {
+        max-width: 296px;
+        width: 100%;
+        margin-top: 16px;
+        position: relative;
+        @include lg {
+            max-width: 700px;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        @include md {
+            &::after{
+                content: '';
+                position: absolute;
+                height: 1px;
+                left: 5%;
+                right: 5%;
+                bottom: -17px;
+                background-color: $text-white;
+                opacity: 0.5;
+            }
+           
+        }
+    }
+
+    &__block {
+        margin-top: 13px;
+        position: relative;
+
+        @include md {
+            width: 50%;
+            margin-bottom: 24px;
+
+            &::after{
+                content: '';
+                position: absolute;
+                height: 1px;
+                left: 0;
+                right: 10%;
+                bottom: -17px;
+                background-color: $text-white;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 24px;
+        color: $white;
+        @extend %inter-700;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+
+            @include lg {
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    &__link {
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__bottom {
+        &--love {
+            position: relative;
+            padding-left: 27px;
+            &::before {
+                position: absolute;
+                content: url("../../img/icons/heart.svg");
+                left: 0;
+               top: -2px;
+            }
+        }
+        @include sm {
+          font-size: 14px;
+        }
+    }
+
+    &__copyring {
+        @include sm {
+            display: block;
+           font-size: 14px;
+        }
+    }
+
+    .logo-white {
+        max-width: 121px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+.btn-burger {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    transition: scale 0.5s transform 0.5s;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &__line,
+    &__line::after,
+    &__line::before {
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        left: 0;
+        background-color: $accent;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    &__line {
+        
+        &:after {
+            content: "";
+            top: 15px;
+            left: 0;
+        }
+
+        &:before {
+            content: "";
+            top: -15px;
+            left: 0;
+        }
+
+        &--active {
+            background-color: transparent;
+
+            &::after {
+                background-color: $white;
+                transform: rotate(-45deg);
+                top: 0;
+            }
+
+            &::before {
+                background-color: $white;
+                transform: rotate(45deg);
+                top: 0;
+            }
+        }
+    }
+}

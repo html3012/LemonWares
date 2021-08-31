@@ -1,10 +1,19 @@
 @import'vars';
 @import 'fonts';
 @import 'reset';
-@import 'moxin';
+@import 'mixin';
 @import 'global';
 
-@import 'components/header';
+@import 'components/bem-block/btn-burger';
+@import 'components/bem-block/contact';
+@import 'components/bem-block/filter';
 @import 'components/footer';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/prices';
+@import 'components/testimonials';
+@import 'components/whyus';
+
+
 
 

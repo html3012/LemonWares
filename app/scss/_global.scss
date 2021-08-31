@@ -7,7 +7,11 @@ body {
 }
 
 body {
-    
+   background-color: $white;
+   color: $black; 
+   @extend %inter-400;
+   font-size: 16px;
+   line-height: 2;
 }
 
 .wrapper {
@@ -49,3 +53,55 @@ body {
     white-space: nowrap; /* added line */
     border: 0;
 }
+
+.btn-burger {
+    display: none;
+    @include lg {
+        display: block;
+    }
+}
+
+.logo,
+.logo-white {
+    transition: transform 0.3s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.title {
+    @extend %inter-800;
+    font-size: 48px;
+    line-height: 1.3;
+    color: $text;
+
+    @include md {
+        font-size: 38px;
+    }
+}
+
+.title-lg {
+    @extend %poppins-600;
+    font-size: 50px;
+    line-height: 1.2;
+    color: $black;
+
+    @include md {
+        font-size: 42px;
+    }
+}
+
+.triengl {
+    position: absolute;
+    max-width: 40px;
+    width: 40px;
+    bottom: 25%;
+    fill: $accent;
+
+    @include md {
+        max-width: 28px;
+        width: 100%;
+    }
+
+}
+

@@ -1,0 +1,63 @@
+.contact {
+    background-color: $white-200;
+    position: relative;
+    padding: 80px 0 88px;
+    margin-bottom: 110px;
+
+    &__title {
+        @extend %poppins-600;
+        font-size: 64px;
+        line-height: 1.4;
+        color: $title;
+       display: block;
+       max-width: 990px;
+       width: 100%;
+       margin: 0 auto;
+       text-align: center;
+       margin-bottom: 40px;
+        
+    }
+
+    &__btn {
+        display: block;
+        background-color: $accent;
+        border-radius: 8px;
+        padding: 12px 18px 12px 50px;
+        color: $white;
+        margin: 0 auto;
+        background-image: url('../../../img/icons/whatsapp.svg');
+        background-repeat: no-repeat;
+        background-position: 14px 8px;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: $quote;
+           
+
+        }
+    }
+
+    &__triengl {
+       
+        &--left {
+            left: 0;
+            bottom: 5%;
+        }
+
+        &--top {
+            top: -55px;
+            right: 60%;
+        }
+
+        &--big {
+            max-width: 72px;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+
+            @include md {
+                max-width: 50px;
+                width: 100%;
+            }
+        }
+    }
+}
